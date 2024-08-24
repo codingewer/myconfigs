@@ -1,0 +1,153 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Liberation Mono;
+  min-height: 1px;
+  font-weight:500;
+  font-size:14px;
+
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces {
+  border-radius: 10px;
+  background: #161925;
+  padding-right:5px;
+
+}
+
+#workspaces button {
+  transition: 1s ease-in;
+  color: #BFCFE7;
+  background: transparent;
+  padding: 5px;
+
+}
+
+#workspaces button.persistent {
+  color: #7c818c;
+  font-size: 12px;
+}
+
+
+#workspaces button:hover {
+  transition: 1s ease-out;
+  color: #3CF2B0;
+  background: transparent;
+}
+
+#workspaces button.active {
+  transition: 0.5s ease-out;
+
+    color: #FACF5A;
+}
+
+
+#pulseaudio.muted {
+  background-color: #90b1b1;
+  color: #2a5c45;
+}
+
+
+#temperature.critical {
+  background-color: #eb4d4b;
+}
+
+
+#battery, #custom-gpu-usage , #tray,#backlight , #temperature , #cpu,
+#memory,
+#network, #pulseaudio, #clock,
+#custom-power,
+#custom-launcher {
+  margin-right: 5px;
+  transition: none;
+  padding-left:5px;
+  padding-right:5px;
+  background: #161925;
+  padding: 5px  15px;
+  border-radius: 5px;
+}
+
+.modules-left{
+  margin-left: 8px;
+  margin-top:5px;
+  color: #FACF5A;
+  transition: none;
+  border-radius: 10px;
+}
+.modules-center{
+  margin-top:5px;
+  color: #51EAEA;
+  transition: none;
+  border-radius: 10px;
+}
+
+.modules-right {
+  margin-right: 8px;
+  border-radius: 10px;
+  transition: none;
+  margin-top:5px;
+  color:#FB3569;
+}
+
+
+#custom-power, #custom-launcher  {
+  padding: 5px 15px;
+
+}
+
+#battery.charging {
+  color: #ffffff;
+  background-color: #5C8374;
+}
+
+#battery.warning:not(.charging) {
+  background-color: #ffbe61;
+  color: black;
+}
+
+#battery.critical:not(.charging) {
+  background: #26a65b;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+
+#backlight-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+#backlight-slider trough {
+  min-height: 10px;
+  min-width: 80px;
+  border-radius: 5px;
+  background-color: black;
+}
+#backlight-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: red;
+}
